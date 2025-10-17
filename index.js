@@ -9,3 +9,10 @@ const port = 3000;
 
 //Middleware to parse JSON
 app.use(express.json());
+
+// Creating in memory storage for tasks
+
+// It is an array which will store all the tasks
+
+let tasks = [];
+
