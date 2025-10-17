@@ -1,12 +1,11 @@
+// Import Express module
 const express = require('express');
+
+// Create Express App
 const app = express();
+
+//Set the port
+const port = 3000;
+
+//Middleware to parse JSON
 app.use(express.json());
-
-// Test route
-app.get('/', (req, res) => {
-  res.send('✅ DotKonnekt Task Scheduler API is running!');
-});
-
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
