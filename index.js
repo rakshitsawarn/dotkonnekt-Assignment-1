@@ -16,3 +16,6 @@ app.use(express.json());
 
 let tasks = [];
 
+// It will give unique id to each task
+
+let next_id = 1;
