@@ -1,5 +1,8 @@
 // routes/tasks.js
+
 const express = require('express');
+
+// Router Object will help in defining multiple routes
 const router = express.Router();
 const { scheduleTask, getTasks, cancelTask } = require('../controllers/taskController');
 
