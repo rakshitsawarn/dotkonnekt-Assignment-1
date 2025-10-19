@@ -12,7 +12,7 @@ app.use(express.json());
 // Use the routes
 app.use('/', taskRoutes);
 
-// Default route (optional)
+// Default route
 app.get('/', (req, res) => {
   res.send("Task Scheduler API is running. Use POST /schedule and GET /tasks");
 });
