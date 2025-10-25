@@ -1,8 +1,6 @@
-// routes/tasks.js
-
 const express = require('express');
 
-// Router Object will help in defining multiple
+// It will help in defining multiple routes
 const router = express.Router();
 
 // Importing these functions from taskController.js present inside controllers folder
@@ -15,5 +13,5 @@ router.get('/tasks', getTasks);
 router.delete('/cancel/:id', cancelTask);
 
 
-// Exports the router object so that other modules can use it
+// Exporting the router object so that other modules can use it
 module.exports = router;

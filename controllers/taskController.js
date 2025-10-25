@@ -1,6 +1,10 @@
 // Using Map for better concurrency & easy cancellation
+
 const tasks = new Map();
+
+// nextId is used for generating unique Tasks IDs
 let nextId = 1;
+
 
 const scheduleTask = (req, res) => {
   try {
@@ -28,7 +32,7 @@ const scheduleTask = (req, res) => {
       console.log(`Task ${task.id} completed!`);
     }, delay * 1000);
 
-    // Store both task and its timeout for cancellation
+    // Storing both task and its timeout for cancellation
     tasks.set(id, { task, timeoutId });
 
     res.status(201).json(task);
